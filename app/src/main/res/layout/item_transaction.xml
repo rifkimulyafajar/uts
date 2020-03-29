@@ -7,7 +7,7 @@
     android:background="#fff">
 
     <TextView
-        android:id="@+id/textView_menu"
+        android:id="@+id/text_menu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_harga"
+        android:id="@+id/text_harga"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -30,8 +30,8 @@
         android:textColor="#000"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/textView_menu"
-        app:layout_constraintTop_toBottomOf="@+id/textView_menu" />
+        app:layout_constraintStart_toStartOf="@+id/text_menu"
+        app:layout_constraintTop_toBottomOf="@+id/text_menu" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
