@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -58,5 +60,14 @@ public class DetailLapActivity extends AppCompatActivity {
         text_jenis.setText(jenis);
         text_detail.setText(detail);
         text_harga.setText(formatRupiah.format((double)harga));
+    }
+
+    public void handleWA(View view) {
+        String number="+6285804871527";
+
+        String url = "https://api.whatsapp.com/send?phone="+number;
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
     }
 }
