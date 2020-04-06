@@ -2,13 +2,14 @@ package com.example.uts.model;
 
 public class Futsal {
     String jenis, detail, foto;
-    int harga;
+    int harga_wday, harga_wend;
 
-    public Futsal(String jenis, String detail, String foto, int harga) {
+    public Futsal(String jenis, String detail, String foto, int harga_wday, int harga_wend) {
         this.jenis = jenis;
         this.detail = detail;
         this.foto = foto;
-        this.harga = harga;
+        this.harga_wday = harga_wday;
+        this.harga_wend = harga_wend;
     }
 
     public String getJenis() {
@@ -35,11 +36,11 @@ public class Futsal {
         this.foto = foto;
     }
 
-    public int getHarga() {
-        return harga;
+    public int getHarga_wday() {
+        return harga_wday;
     }
 
-    public void setHarga(int harga) {
-        this.harga = harga;
+    public void setHarga_wday(int harga) {
+        this.harga_wday = harga;
     }
 }

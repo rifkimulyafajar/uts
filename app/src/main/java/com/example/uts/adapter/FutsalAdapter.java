@@ -56,16 +56,23 @@ public class FutsalAdapter extends RecyclerView.Adapter<FutsalAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-        Futsal futsal = items.get(position);
+        final Futsal futsal = items.get(position);
         Glide.with(context).load(futsal.getFoto()).into(holder.imgLap);
         holder.textJenis.setText(futsal.getJenis());
-        holder.textHarga.setText(String.valueOf(futsal.getHarga()));
-        holder.textHarga.setText(formatRupiah.format((double)futsal.getHarga()));
+        holder.textHarga.setText(formatRupiah.format((double)futsal.getHarga_wday()));
 
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, holder.textJenis.getText().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, futsal.getJenis(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(context, DetailLapActivity.class);
+
+                intent.putExtra("keyFoto", futsal.getFoto());
+                intent.putExtra("keyJenis", futsal.getJenis());
+                intent.putExtra("keyDetail", futsal.getDetail());
+                intent.putExtra("keyHarga", futsal.getHarga_wday());
+                context.startActivity(intent);
             }
         });
     }
