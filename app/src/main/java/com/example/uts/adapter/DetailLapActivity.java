@@ -2,7 +2,6 @@ package com.example.uts.adapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -46,8 +45,6 @@ public class DetailLapActivity extends AppCompatActivity {
 
         hargaEndSiang.setText(formatRupiah.format((double)harga+10000));
         hargaEndMalam.setText(formatRupiah.format((double)harga+20000));
-//        text_harga.setText(formatRupiah.format((double)harga));
-
     }
 
     private void setContent(String foto, String jenis, String detail, int harga) {
